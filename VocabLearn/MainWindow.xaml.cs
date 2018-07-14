@@ -15,8 +15,11 @@ using System.Windows.Shapes;
 using VocabLearn.Class;
 using System.Collections;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Microsoft.Win32;
 using VocabLearn.Windows;
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 
@@ -38,9 +41,12 @@ namespace VocabLearn
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Hide Result
         public void HideResults()
 =======
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         public void HideResult()
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
@@ -49,10 +55,13 @@ namespace VocabLearn
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         //Show Result
         public void ShowResults()
 =======
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         public void ShowResult()
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
@@ -66,9 +75,12 @@ namespace VocabLearn
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Show result by click "Show Result" button
         private void miTShowResults_Click(object sender, RoutedEventArgs e)
 =======
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         private void miTShowResult_Click(object sender, RoutedEventArgs e)
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
@@ -83,6 +95,7 @@ namespace VocabLearn
                 miTShowResults.Header = "Show Results";
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         //Open file
@@ -104,6 +117,8 @@ namespace VocabLearn
             About aboutWindows = new About();
             aboutWindows.Show();
         }
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
     }
