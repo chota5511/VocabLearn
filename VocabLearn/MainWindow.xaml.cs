@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VocabLearn.Class;
 using System.Collections;
-using System.IO;
 
 namespace VocabLearn
 {
@@ -24,6 +23,7 @@ namespace VocabLearn
     public partial class MainWindow : Window
     {
         string scriptPath = "script.txt";
+        string resultPath = "result.txt";
 
         public MainWindow()
         {
@@ -40,7 +40,6 @@ namespace VocabLearn
         }
         public void ShowResult()
         {
-            lvVocab.Items.Clear();
             Variables.vocabList.Clear();
             Function.InitVocabData(scriptPath, Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);

@@ -10,6 +10,5 @@ namespace VocabLearn.Class
     static class Variables
     {
         public static ArrayList vocabList = new ArrayList();
-        public static ArrayList typeMean = new ArrayList();
     }
 }
