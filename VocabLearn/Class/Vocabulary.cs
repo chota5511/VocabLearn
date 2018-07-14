@@ -76,8 +76,17 @@ namespace VocabLearn.Class
         public static void WriteFile(string path, Vocabulary vocab)
         {
             StreamWriter file = new StreamWriter(path);
-            file.WriteLine(" #" + vocab.Word + "#" + vocab.Mean);
+            file.WriteLine(" #" + vocab.Word + "#" + vocab.Mean + "#" + vocab.Typed);
             file.Close();
+        }
+
+        //Write Vocabulary object in ArrayList to file
+        public static void WriteFromArrayList(string path, ArrayList arrayList)
+        {
+            for(int i = 0; i < arrayList.Count; i++)
+            {
+                WriteFile(path, (Vocabulary)arrayList[i]);
+            }
         }
 
         //Initial a Vocabulary data of a file with file's path
@@ -87,6 +96,21 @@ namespace VocabLearn.Class
             for (int i = 0; i < arrayList.Count; i++)
             {
                 arrayList[i] = Vocabulary.ConvertToVocabulary((string)arrayList[i]);
+            }
+        }
+
+        //Parse mean of Vocabulary object to other object
+        public static void ParseTyped(Vocabulary vocabulary, Vocabulary _vocabulary)
+        {
+            vocabulary.typed = _vocabulary.typed;
+        }
+
+        //Parse mean of all object vocabulary ArrayList
+        public static void ParseAllTyped(ArrayList arrayList, ArrayList _arrayList)
+        {
+            for(int i = 0; i < arrayList.Count; i++)
+            {
+                ParseTyped((Vocabulary)arrayList[i], (Vocabulary)_arrayList[i]);
             }
         }
 

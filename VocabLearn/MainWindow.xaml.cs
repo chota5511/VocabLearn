@@ -40,8 +40,12 @@ namespace VocabLearn
         }
         public void ShowResult()
         {
+            ArrayList tmp = new ArrayList();
+            Function.ListViewToArrayList(lvVocab, tmp);
             Variables.vocabList.Clear();
             Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
+            Vocabulary.ParseAllTyped(Variables.vocabList, tmp);
+            lvVocab.Items.Clear();
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 
