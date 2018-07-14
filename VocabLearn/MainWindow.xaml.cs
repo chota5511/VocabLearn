@@ -14,7 +14,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VocabLearn.Class;
 using System.Collections;
+<<<<<<< HEAD
 using Microsoft.Win32;
+using VocabLearn.Windows;
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 
 namespace VocabLearn
 {
@@ -29,28 +33,28 @@ namespace VocabLearn
         public MainWindow()
         {
             InitializeComponent();
-
-        }
-
-        //Initial
-        private void Initial()
-        {
-            lvVocab.Items.Clear();
-            Variables.vocabList.Clear();
             Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
-            HideResult();
+            HideResults();
         }
 
+<<<<<<< HEAD
         //Hide Result
+        public void HideResults()
+=======
         public void HideResult()
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
             lvVocab.Items.Clear();
             Vocabulary.DelAllMean(Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
+<<<<<<< HEAD
 
         //Show Result
+        public void ShowResults()
+=======
         public void ShowResult()
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
             ArrayList tmp = new ArrayList();
             Function.ListViewToArrayList(lvVocab, tmp);
@@ -61,20 +65,25 @@ namespace VocabLearn
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 
+<<<<<<< HEAD
         //Show result by click "Show Result" button
+        private void miTShowResults_Click(object sender, RoutedEventArgs e)
+=======
         private void miTShowResult_Click(object sender, RoutedEventArgs e)
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
-            if(miTShowResult.Header != "Hide Result")
+            if(miTShowResults.Header != "Hide Results")
             {
-                ShowResult();
-                miTShowResult.Header = "Hide Result";
+                ShowResults();
+                miTShowResults.Header = "Hide Results";
             }
             else
             {
-                HideResult();
-                miTShowResult.Header = "Show Result";
+                HideResults();
+                miTShowResults.Header = "Show Results";
             }
         }
+<<<<<<< HEAD
 
         //Open file
         private void miFOpen_Click(object sender, RoutedEventArgs e)
@@ -89,5 +98,13 @@ namespace VocabLearn
                 Initial();
             }
         }
+
+        private void miAbout_Click(object sender, RoutedEventArgs e)
+        {
+            About aboutWindows = new About();
+            aboutWindows.Show();
+        }
+=======
+>>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
     }
 }
