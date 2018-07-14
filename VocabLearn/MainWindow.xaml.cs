@@ -16,12 +16,16 @@ using VocabLearn.Class;
 using System.Collections;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Microsoft.Win32;
 using VocabLearn.Windows;
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
+=======
+using Microsoft.Win32;
+>>>>>>> parent of 7851be1... 0.1.7
 
 namespace VocabLearn
 {
@@ -36,10 +40,19 @@ namespace VocabLearn
         public MainWindow()
         {
             InitializeComponent();
-            Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
-            HideResults();
+
         }
 
+        //Initial
+        private void Initial()
+        {
+            lvVocab.Items.Clear();
+            Variables.vocabList.Clear();
+            Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
+            HideResult();
+        }
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         //Hide Result
@@ -47,13 +60,16 @@ namespace VocabLearn
 =======
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
+=======
+        //Hide Result
+>>>>>>> parent of 7851be1... 0.1.7
         public void HideResult()
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
             lvVocab.Items.Clear();
             Vocabulary.DelAllMean(Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,8 +78,11 @@ namespace VocabLearn
 =======
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
+=======
+
+        //Show Result
+>>>>>>> parent of 7851be1... 0.1.7
         public void ShowResult()
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
             ArrayList tmp = new ArrayList();
             Function.ListViewToArrayList(lvVocab, tmp);
@@ -76,27 +95,33 @@ namespace VocabLearn
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Show result by click "Show Result" button
         private void miTShowResults_Click(object sender, RoutedEventArgs e)
 =======
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
+=======
+        //Show result by click "Show Result" button
+>>>>>>> parent of 7851be1... 0.1.7
         private void miTShowResult_Click(object sender, RoutedEventArgs e)
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
         {
-            if(miTShowResults.Header != "Hide Results")
+            if(miTShowResult.Header != "Hide Result")
             {
-                ShowResults();
-                miTShowResults.Header = "Hide Results";
+                ShowResult();
+                miTShowResult.Header = "Hide Result";
             }
             else
             {
-                HideResults();
-                miTShowResults.Header = "Show Results";
+                HideResult();
+                miTShowResult.Header = "Show Result";
             }
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7851be1... 0.1.7
 
         //Open file
         private void miFOpen_Click(object sender, RoutedEventArgs e)
@@ -111,6 +136,7 @@ namespace VocabLearn
                 Initial();
             }
         }
+<<<<<<< HEAD
 
         private void miAbout_Click(object sender, RoutedEventArgs e)
         {
@@ -121,5 +147,7 @@ namespace VocabLearn
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 =======
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
+=======
+>>>>>>> parent of 7851be1... 0.1.7
     }
 }

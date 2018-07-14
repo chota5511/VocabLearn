@@ -10,7 +10,7 @@
         <Menu>
             <MenuItem Name="miFile" Header="File">
                 <MenuItem Name="miFNew" Header="New"/>
-                <MenuItem Name="miFOpen" Header="Open"/>
+                <MenuItem Name="miFOpen" Header="Open" Click="miFOpen_Click"/>
                 <MenuItem Name="miFExit" Header="Exit"/>
             </MenuItem>
             <MenuItem Name="miTools" Header="Tools">
@@ -34,15 +34,12 @@
                         <Image Source="/Images/stop.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Name="miTShowResults" Header="Show Results" Click="miTShowResults_Click"/>
+                <MenuItem Name="miTShowResult" Header="Show Result" Click="miTShowResult_Click"/>
             </MenuItem>
             <MenuItem Name="miSetting" Header="Setting"/>
-            <MenuItem Name="miHelp" Header="Help">
-                <MenuItem Name="miTutorials" Header="Tutorials"/>
-                <MenuItem Name="miAbout" Header="About" Click="miAbout_Click"/>
-            </MenuItem>
+            <MenuItem Name="miHelp" Header="Help"/>
         </Menu>
-        <ListView Name="lvVocab" SelectionMode="Single" Margin="10,100,10,10">
+        <ListView Name="lvVocab" SelectionMode="Extended" Margin="10,100,10,10">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Vocabulary" Width="150" DisplayMemberBinding="{Binding Word}"/>
