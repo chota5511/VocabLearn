@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VocabLearn.Class;
 using System.Collections;
+using Microsoft.Win32;
 
 namespace VocabLearn
 {
@@ -28,16 +29,27 @@ namespace VocabLearn
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        //Initial
+        private void Initial()
+        {
+            lvVocab.Items.Clear();
+            Variables.vocabList.Clear();
             Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
             HideResult();
         }
 
+        //Hide Result
         public void HideResult()
         {
             lvVocab.Items.Clear();
             Vocabulary.DelAllMean(Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
+
+        //Show Result
         public void ShowResult()
         {
             ArrayList tmp = new ArrayList();
@@ -49,6 +61,7 @@ namespace VocabLearn
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 
+        //Show result by click "Show Result" button
         private void miTShowResult_Click(object sender, RoutedEventArgs e)
         {
             if(miTShowResult.Header != "Hide Result")
@@ -60,6 +73,20 @@ namespace VocabLearn
             {
                 HideResult();
                 miTShowResult.Header = "Show Result";
+            }
+        }
+
+        //Open file
+        private void miFOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*txt|All files (*.*)|*.*";  //Set file filter
+            openFileDialog.FilterIndex = 1;                                         //Set file filter default index
+            openFileDialog.RestoreDirectory = true;                                 //Set default path directory to app path directory
+            if(openFileDialog.ShowDialog() == true)                                 //If "Open" button is clicked get file path and reinitial
+            {
+                scriptPath = openFileDialog.FileName;
+                Initial();
             }
         }
     }
