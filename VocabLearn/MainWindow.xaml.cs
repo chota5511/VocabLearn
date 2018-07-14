@@ -28,7 +28,7 @@ namespace VocabLearn
         public MainWindow()
         {
             InitializeComponent();
-            Function.InitVocabData(scriptPath, Variables.vocabList);
+            Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
             HideResult();
         }
 
@@ -41,7 +41,7 @@ namespace VocabLearn
         public void ShowResult()
         {
             Variables.vocabList.Clear();
-            Function.InitVocabData(scriptPath, Variables.vocabList);
+            Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 

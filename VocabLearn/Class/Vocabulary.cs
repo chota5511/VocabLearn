@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.IO;
 
 namespace VocabLearn.Class
 {
@@ -69,6 +70,24 @@ namespace VocabLearn.Class
                 }
             }
             return tmp;
+        }
+
+        //Writefile to path from Vocabulary variable
+        public static void WriteFile(string path, Vocabulary vocab)
+        {
+            StreamWriter file = new StreamWriter(path);
+            file.WriteLine(" #" + vocab.Word + "#" + vocab.Mean);
+            file.Close();
+        }
+
+        //Initial a Vocabulary data of a file with file's path
+        public static void InitVocabData(string path, ArrayList arrayList)
+        {
+            Function.ReadFile(path, arrayList);
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                arrayList[i] = Vocabulary.ConvertToVocabulary((string)arrayList[i]);
+            }
         }
 
         public object Clone()
