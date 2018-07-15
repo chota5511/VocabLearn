@@ -14,34 +14,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VocabLearn.Class;
 using System.Collections;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 using Microsoft.Win32;
 using VocabLearn.Windows;
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
 using Microsoft.Win32;
->>>>>>> parent of 7851be1... 0.1.7
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
 using Microsoft.Win32;
->>>>>>> parent of 7851be1... 0.1.7
+
 
 namespace VocabLearn
 {
@@ -65,73 +42,19 @@ namespace VocabLearn
             lvVocab.Items.Clear();
             Variables.vocabList.Clear();
             Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
-            HideResult();
+            HideResults();
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         //Hide Result
         public void HideResults()
-=======
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
-        //Hide Result
->>>>>>> parent of 7851be1... 0.1.7
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
-        //Hide Result
->>>>>>> parent of 7851be1... 0.1.7
-        public void HideResult()
         {
             lvVocab.Items.Clear();
             Vocabulary.DelAllMean(Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         //Show Result
         public void ShowResults()
-=======
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
-
-        //Show Result
->>>>>>> parent of 7851be1... 0.1.7
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
-
-        //Show Result
->>>>>>> parent of 7851be1... 0.1.7
-        public void ShowResult()
         {
             ArrayList tmp = new ArrayList();
             Function.ListViewToArrayList(lvVocab, tmp);
@@ -142,59 +65,20 @@ namespace VocabLearn
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         //Show result by click "Show Result" button
         private void miTShowResults_Click(object sender, RoutedEventArgs e)
-=======
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
-        //Show result by click "Show Result" button
->>>>>>> parent of 7851be1... 0.1.7
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
-        //Show result by click "Show Result" button
->>>>>>> parent of 7851be1... 0.1.7
-        private void miTShowResult_Click(object sender, RoutedEventArgs e)
         {
-            if(miTShowResult.Header != "Hide Result")
+            if(miTShowResults.Header != "Hide Result")
             {
-                ShowResult();
-                miTShowResult.Header = "Hide Result";
+                ShowResults();
+                miTShowResults.Header = "Hide Result";
             }
             else
             {
-                HideResult();
-                miTShowResult.Header = "Show Result";
+                HideResults();
+                miTShowResults.Header = "Show Result";
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 7851be1... 0.1.7
-=======
->>>>>>> parent of 7851be1... 0.1.7
-
         //Open file
         private void miFOpen_Click(object sender, RoutedEventArgs e)
         {
@@ -208,29 +92,11 @@ namespace VocabLearn
                 Initial();
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         private void miAbout_Click(object sender, RoutedEventArgs e)
         {
             About aboutWindows = new About();
             aboutWindows.Show();
         }
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
->>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
-=======
->>>>>>> parent of 7851be1... 0.1.7
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 87ed9a5... 0.1.6
-=======
->>>>>>> parent of 7851be1... 0.1.7
     }
 }
