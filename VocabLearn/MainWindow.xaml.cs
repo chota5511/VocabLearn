@@ -16,7 +16,6 @@ using VocabLearn.Class;
 using System.Collections;
 using Microsoft.Win32;
 using VocabLearn.Windows;
-using Microsoft.Win32;
 
 
 namespace VocabLearn
@@ -93,6 +92,12 @@ namespace VocabLearn
         {
             About aboutWindows = new About();
             aboutWindows.Show();
+        }
+
+        private void miFNew_Click(object sender, RoutedEventArgs e)
+        {
+            NewScript newScript = new NewScript();
+            newScript.ShowDialog();
         }
     }
 }

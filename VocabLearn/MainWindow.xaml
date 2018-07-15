@@ -9,7 +9,7 @@
     <Grid>
         <Menu>
             <MenuItem Name="miFile" Header="File">
-                <MenuItem Name="miFNew" Header="New"/>
+                <MenuItem Name="miFNew" Header="New" Click="miFNew_Click"/>
                 <MenuItem Name="miFOpen" Header="Open" Click="miFOpen_Click"/>
                 <MenuItem Name="miFExit" Header="Exit"/>
             </MenuItem>
