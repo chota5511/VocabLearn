@@ -17,7 +17,6 @@ using System.Collections;
 using Microsoft.Win32;
 using VocabLearn.Windows;
 using Microsoft.Win32;
-using Microsoft.Win32;
 
 
 namespace VocabLearn
@@ -27,9 +26,6 @@ namespace VocabLearn
     /// </summary>
     public partial class MainWindow : Window
     {
-        string scriptPath = "script.txt";
-        string resultPath = "result.txt";
-
         public MainWindow()
         {
             InitializeComponent();
@@ -41,7 +37,7 @@ namespace VocabLearn
         {
             lvVocab.Items.Clear();
             Variables.vocabList.Clear();
-            Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
+            Vocabulary.InitVocabData(Variables.scriptPath, Variables.vocabList);
             HideResults();
         }
 
@@ -59,7 +55,7 @@ namespace VocabLearn
             ArrayList tmp = new ArrayList();
             Function.ListViewToArrayList(lvVocab, tmp);
             Variables.vocabList.Clear();
-            Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
+            Vocabulary.InitVocabData(Variables.scriptPath, Variables.vocabList);
             Vocabulary.ParseAllTyped(Variables.vocabList, tmp);
             lvVocab.Items.Clear();
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
@@ -88,7 +84,7 @@ namespace VocabLearn
             openFileDialog.RestoreDirectory = true;                                 //Set default path directory to app path directory
             if(openFileDialog.ShowDialog() == true)                                 //If "Open" button is clicked get file path and reinitial
             {
-                scriptPath = openFileDialog.FileName;
+                Variables.scriptPath = openFileDialog.FileName;
                 Initial();
             }
         }
