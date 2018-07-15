@@ -10,7 +10,7 @@
         <Menu>
             <MenuItem Name="miFile" Header="File">
                 <MenuItem Name="miFNew" Header="New"/>
-                <MenuItem Name="miFOpen" Header="Open"/>
+                <MenuItem Name="miFOpen" Header="Open" Click="miFOpen_Click"/>
                 <MenuItem Name="miFExit" Header="Exit"/>
             </MenuItem>
             <MenuItem Name="miTools" Header="Tools">

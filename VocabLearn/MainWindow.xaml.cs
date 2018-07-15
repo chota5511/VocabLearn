@@ -21,6 +21,7 @@ using System.Collections;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Microsoft.Win32;
 using VocabLearn.Windows;
 =======
@@ -38,6 +39,9 @@ using Microsoft.Win32;
 >>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
+=======
+using Microsoft.Win32;
+>>>>>>> parent of 7851be1... 0.1.7
 
 namespace VocabLearn
 {
@@ -52,10 +56,19 @@ namespace VocabLearn
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        //Initial
+        private void Initial()
+        {
+            lvVocab.Items.Clear();
+            Variables.vocabList.Clear();
             Vocabulary.InitVocabData(scriptPath, Variables.vocabList);
             HideResult();
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,12 +92,16 @@ namespace VocabLearn
 >>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
+=======
+        //Hide Result
+>>>>>>> parent of 7851be1... 0.1.7
         public void HideResult()
         {
             lvVocab.Items.Clear();
             Vocabulary.DelAllMean(Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +127,10 @@ namespace VocabLearn
 >>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
+=======
+
+        //Show Result
+>>>>>>> parent of 7851be1... 0.1.7
         public void ShowResult()
         {
             ArrayList tmp = new ArrayList();
@@ -121,6 +142,7 @@ namespace VocabLearn
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +166,9 @@ namespace VocabLearn
 >>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
+=======
+        //Show result by click "Show Result" button
+>>>>>>> parent of 7851be1... 0.1.7
         private void miTShowResult_Click(object sender, RoutedEventArgs e)
         {
             if(miTShowResult.Header != "Hide Result")
@@ -164,6 +189,9 @@ namespace VocabLearn
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7851be1... 0.1.7
 =======
 >>>>>>> parent of 7851be1... 0.1.7
 
@@ -180,6 +208,7 @@ namespace VocabLearn
                 Initial();
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         private void miAbout_Click(object sender, RoutedEventArgs e)
@@ -201,5 +230,7 @@ namespace VocabLearn
 >>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
+=======
+>>>>>>> parent of 7851be1... 0.1.7
     }
 }
