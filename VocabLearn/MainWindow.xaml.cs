@@ -18,6 +18,7 @@ using System.Collections;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Microsoft.Win32;
 using VocabLearn.Windows;
 =======
@@ -27,6 +28,8 @@ using VocabLearn.Windows;
 =======
 using Microsoft.Win32;
 >>>>>>> parent of 7851be1... 0.1.7
+=======
+>>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
 
@@ -51,6 +54,7 @@ namespace VocabLearn
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Hide Result
         public void HideResults()
 =======
@@ -61,12 +65,15 @@ namespace VocabLearn
 >>>>>>> parent of 7851be1... 0.1.7
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
+=======
+>>>>>>> parent of 87ed9a5... 0.1.6
         public void HideResult()
         {
             lvVocab.Items.Clear();
             Vocabulary.DelAllMean(Variables.vocabList);
             Function.ArrayListToListView(Variables.vocabList, lvVocab);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,6 +88,8 @@ namespace VocabLearn
 
         //Show Result
 >>>>>>> parent of 7851be1... 0.1.7
+=======
+>>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
         public void ShowResult()
@@ -98,6 +107,7 @@ namespace VocabLearn
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Show result by click "Show Result" button
         private void miTShowResults_Click(object sender, RoutedEventArgs e)
 =======
@@ -106,6 +116,8 @@ namespace VocabLearn
 =======
         //Show result by click "Show Result" button
 >>>>>>> parent of 7851be1... 0.1.7
+=======
+>>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
         private void miTShowResult_Click(object sender, RoutedEventArgs e)
@@ -121,6 +133,7 @@ namespace VocabLearn
                 miTShowResult.Header = "Show Result";
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,6 +167,8 @@ namespace VocabLearn
 >>>>>>> 05ed19200e7c4eeb02b64790cddd1793b5c981e6
 =======
 >>>>>>> parent of 7851be1... 0.1.7
+=======
+>>>>>>> parent of 87ed9a5... 0.1.6
 =======
 >>>>>>> parent of 87ed9a5... 0.1.6
     }
