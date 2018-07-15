@@ -47,7 +47,7 @@
                     <GridViewColumn Header="Type Meaning" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Typed, Mode=TwoWay,NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}" Width="85" VerticalContentAlignment="Center" BorderThickness="0"/>
+                                <TextBox Text="{Binding Typed}" Width="85" VerticalContentAlignment="Center" BorderThickness="0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
