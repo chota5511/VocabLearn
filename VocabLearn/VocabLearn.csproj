@@ -102,7 +102,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\icon.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\pause.png" />
     <Resource Include="Images\run.png" />
